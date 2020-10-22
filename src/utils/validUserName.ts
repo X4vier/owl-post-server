@@ -1,4 +1,4 @@
-export const isValidAdventurerName = (adventurerName: string): boolean => {
+export const validUserName = (adventurerName: string): boolean => {
   const leadingWhitespaceRe = /^[ \t]+/;
   if (leadingWhitespaceRe.test(adventurerName)) return false;
 

@@ -1,4 +1,4 @@
-export const isValidPassword = (password: string): boolean => {
+export const validPassword = (password: string): boolean => {
   const whiteSpace = /\s/;
   if (whiteSpace.test(password)) return false;
 
