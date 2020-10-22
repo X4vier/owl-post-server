@@ -4,8 +4,8 @@ import {
   emailExists,
   userNameExists,
   createUser,
-  getUserByEmailOrUserName,
-  signup,
+  getUserByEmailOrName,
+  signUp,
 } from "../controllers";
 import { validUserName, validEmail, validPassword } from "../utils";
 
@@ -15,7 +15,7 @@ router.get("/emailExists", emailExists);
 
 router.get("/adventurerExists", userNameExists);
 
-router.post("/signup", signup);
+router.post("/signUp", signUp);
 
 router.post("/signin", async (req, res) => {
   const { uniqueId: uniqueId, password } = req.body;
@@ -23,7 +23,7 @@ router.post("/signin", async (req, res) => {
     return res.status(422).send({ error: "Must provide email and password" });
   }
 
-  const user = await getUserByEmailOrUserName(uniqueId);
+  const user = await getUserByEmailOrName(uniqueId);
   if (!user) {
     return res.status(422).send({ error: "Invalid email or adventurer name." });
   }
