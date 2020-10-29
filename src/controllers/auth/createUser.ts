@@ -1,7 +1,5 @@
-import mongoose from "mongoose";
-import { IUser } from "../../types";
+import User from "../../models/User";
 
-const User = mongoose.model<IUser>("User");
 type userInput = {
   email: string;
   password: string;

@@ -1,7 +1,4 @@
-import mongoose from "mongoose";
-import { IUser } from "../../types";
-
-const User = mongoose.model<IUser>("User");
+import User from "../../models/User";
 
 export const getUserByEmailOrName = async (uniqueId: string) => {
   return await User.findOne({

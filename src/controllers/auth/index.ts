@@ -4,3 +4,4 @@ export * from "./createUser";
 export * from "./getUserByEmailOrName";
 export * from "./getUsers";
 export * from "./signUp";
+export * from "./signIn";

@@ -1,6 +1,7 @@
 import { IUser } from "./../types";
 import { model, Schema } from "mongoose";
 import bcrypt from "bcrypt";
+
 const userSchema = new Schema({
   name: {
     type: String,
@@ -56,3 +57,5 @@ userSchema.methods.comparePassword = function (
     });
   });
 };
+
+export default model<IUser>("User", userSchema);

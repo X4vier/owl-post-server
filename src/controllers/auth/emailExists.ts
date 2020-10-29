@@ -1,8 +1,5 @@
-import mongoose from "mongoose";
-import { IUser } from "../../types";
 import { Request, Response } from "express";
-
-const User = mongoose.model<IUser>("User");
+import User from "../../models/User";
 
 export const emailExists = async (
   req: Request<{}, {}, { email?: string }>,
