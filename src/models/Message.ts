@@ -10,9 +10,11 @@ const messageSchema = new Schema({
     type: String,
     required: true,
   },
+  text: { type: String },
   status: {
     type: String,
     required: true,
+    default: "unsent",
   },
   sentDate: Date,
   arrivalDate: Date,
