@@ -22,7 +22,11 @@ const signUp = async (
 
     const user = new User({ email, password, name });
     await user.save();
-    const token = jwt.sign({ userid: user._id }, "MY_SECRET_KEY");
+
+    if (!process.env.JWT_SECRET)
+      throw new Error("JWT_SECRET environment variable not set");
+
+    const token = jwt.sign({ userid: user._id }, process.env.JWT_SECRET);
     return res.send({ token });
   } catch (err) {
     console.log(err);
