@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
-import { IUser } from "../../types";
+import User from "../../models/User";
 import { Request, Response } from "express";
-
-const User = mongoose.model<IUser>("User");
 
 export const userNameExists = async (
   req: Request<{}, {}, { userName?: string }>,

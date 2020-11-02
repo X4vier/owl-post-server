@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 
-const User = mongoose.model("User");
+import User from "../models/User";
 
 const requireAuth = (req: any, res: any, next: any) => {
   const { authorization } = req.headers;

@@ -20,4 +20,4 @@ const messageSchema = new Schema({
   arrivalDate: Date,
 });
 
-export default model<IMessage>("User", messageSchema);
+export default model<IMessage>("Message", messageSchema);

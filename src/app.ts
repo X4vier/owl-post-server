@@ -5,6 +5,7 @@ import todoRoutes from "./routes";
 import bodyParser from "body-parser";
 
 import { router as authRoutes } from "./routes/authRoutes";
+import { router as messageRoutes } from "./routes/messageRoutes";
 
 const app: Express = express();
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(authRoutes);
 app.use(todoRoutes);
+app.use(messageRoutes);
 
 // const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@owlpostdev.vel0i.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority?authMechanism=MONGODB-CR`;
 const uri = `mongodb+srv://admin:sqnCF9jq29dP7vkH@owlpostdev.vel0i.mongodb.net/<dbname>?retryWrites=true&w=majority`;
