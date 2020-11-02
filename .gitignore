@@ -1,3 +1,6 @@
 node_modules
 dist
 nodemon.json
+dist/js/app.js
+dist/js/models/User.js
+dist/js/types/index.js

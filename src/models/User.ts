@@ -17,6 +17,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  location: {
+    latitude: String,
+    longitude: String,
+  },
 });
 
 userSchema.pre("save", function (next) {
